@@ -16,6 +16,11 @@ _clone repo_
 ```
 git clone https://github.com/Andreyka445/simple_password_generator
 ```
+change dir
+
+```
+cd simple_password_generator
+```
 # start the programm
 ```
 python3 password_gen.py
