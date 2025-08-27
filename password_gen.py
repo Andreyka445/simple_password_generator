@@ -1,11 +1,12 @@
 import random
 import string
 
-# длина пароля
-length = 12
-# Символы
-characters = "abcdefghijkmnoprstuvwxyzABCDEFGHIJKMNOPRSTUWXYZ123456789"
-# Генерим пароль
-password = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length))
-# результ
-print = (f"(пароль {password}")
+def generate_password(length=12):
+    characters = string.ascii_letters + string.digits
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
+
+# генерим пароль
+if __name__ == "__main__":
+    generated_password = generate_password()
+    print(f"пасс гее: {generated_password}")
