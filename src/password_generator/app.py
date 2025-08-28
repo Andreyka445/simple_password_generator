@@ -35,7 +35,41 @@ length_box = toga.Box(style=Pack(direction=ROW, padding=5))
             readonly=True,
             style=Pack(padding=5, flex=1)
         )
- # контейнер для ионокфв   
+ # контейнер для ионокфв
+  buttons_box = toga.Box(style=Pack(direction=ROW, padding=5, spacing=5))
+ # КНОПКА ГЕНЕРАТЦАИ
+        generate_btn = toga.Button(
+            'НЕИИРОВАТЬ', 
+            on_press=self.generate_password,
+            style=Pack(flex=1)
+        )
+ # интерфейс
+        length_box.add(length_label)
+        length_box.add(self.length_input)
+        
+        buttons_box.add(generate_btn)
+        buttons_box.add(copy_btn)
+        
+        main_box.add(title_label)
+        main_box.add(length_box)
+        main_box.add(self.password_input)
+        main_box.add(buttons_box)
+        
+        # окно
+        self.main_window = toga.MainWindow(title=self.formal_name)
+        self.main_window.content = main_box
+        self.main_window.show()
+   def generate_password(self, widget):
+       # бекем кусок оригинала
+        length = int(self.length_input.value)
+        password = generate_password(length)
+        self.password_input.value = password
+   def copy_password(self, widget):
+       if self.password_input.value:
+           self.main_window.clipboard = self.password_input.value
+
+def main():
+    return PasswordGenerator()
 
 
         
