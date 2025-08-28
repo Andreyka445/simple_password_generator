@@ -23,4 +23,4 @@ cd simple_password_generator
 ```
 # start the programm
 ```
-python3 password_gen.py
+python3 pass_gen.py
