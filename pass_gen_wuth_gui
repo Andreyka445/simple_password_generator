@@ -15,7 +15,7 @@ class PasswordGenerator(toga.App):
         main_box = toga.Box(style=Pack(direction=COLUMN, padding=10))
 
 # Zagalovok
- title_label = toga.Label(
+  title_label = toga.Label(
             'Генератор паролей', 
             style=Pack(font_size=20, padding_bottom=10)
         )
