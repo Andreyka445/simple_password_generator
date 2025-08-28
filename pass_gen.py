@@ -64,6 +64,7 @@ class PasswordGenerator:
                            bg="#2196F3", fg="white",
                            font=("Arial", 10, "bold"))
         copy_btn.pack(side=tk.LEFT, padx=5)
+        # TG LINK wen work?
         telegram_frame = tk.Frame(self.window)
         telegram_frame.pack(pady=10)
 
