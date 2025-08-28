@@ -20,7 +20,7 @@ class PasswordGenerator:
     
     def create_widgets(self):
         # Zagolovok
-        title_label = tk.Label(self.window, text="Генератор паролей", 
+        title_label = tk.Label(self.window, text="Генерал пароль приветствует тебя !", 
                               font=("Arial", 16, "bold"))
         title_label.pack(pady=10)
         
@@ -64,6 +64,19 @@ class PasswordGenerator:
                            bg="#2196F3", fg="white",
                            font=("Arial", 10, "bold"))
         copy_btn.pack(side=tk.LEFT, padx=5)
+        telegram_frame = tk.Frame(self.window)
+        telegram_frame.pack(pady=10)
+
+        telegram_label = tk.Label(telegram_frame, text="Сделано VeroX :",
+                                 font=("Arial", 9))
+        telegram_label.pack()
+
+        telegram_link = tk.Label(telegram_frame, text="https://t.me/Andreyka445real",
+                                font=("Arial", 9, "underline"),
+                                fg="blue",
+                                cursor="hand2")
+        telegram_link.pack(pady=2)
+        telegram_link.bind("<Button-1>", lambda e: self.open_telegram())
     
     def generate_password(self):
         try:
