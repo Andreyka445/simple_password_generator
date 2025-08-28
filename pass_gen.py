@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 import random
 import string
+import webbrowser
 
 def generate_password(length=12):
     characters = string.ascii_letters + string.digits
@@ -13,7 +14,7 @@ class PasswordGenerator:
     def __init__(self):
         self.window = tk.Tk()
         self.window.title("генерал пароль by  Andreyka445 / VeroX")
-        self.window.geometry("400x200")
+        self.window.geometry("640x480")
         self.window.resizable(False, False)
         
         self.create_widgets()
