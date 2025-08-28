@@ -82,7 +82,7 @@ class PasswordGenerator:
         if password:
             self.window.clipboard_clear()
             self.window.clipboard_append(password)
-            messagebox.showinfo('урооо", "пароль скопирован")
+            messagebox.showinfo("урооо", "пароль скопирован")
         else:
             messagebox.showwarning("сначчала пароль сделай")
     
